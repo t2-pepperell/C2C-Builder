@@ -1,0 +1,205 @@
+#header-wrap{
+  height: 50px;
+  background: #122038;
+  margin: 0;
+}
+
+#header-left{
+  width: 75px;
+margin-top: 8px;
+}
+
+#header-middle{
+    float: none;
+    display: inline-block;
+    margin: 0 auto;
+    text-align:right;
+    margin-top: 12px;
+    color: #fff;
+}
+
+#header-right{
+    color: #f7f7f7;
+    margin-right: 25px;
+}
+
+#header-left .menu{
+    color: #f7f7f7;
+    margin-left: 25px;
+    font-size: 22px;
+    text-shadow: 1px 1px #000;
+    background: #09101C;
+    vertical-align: middle;
+    border-radius: 10%;
+    padding: 4px;
+}
+.menu-dropdown{
+  margin-top: 0;
+  margin-left: 35px;
+  background: #09101c;
+  border-radius: 0;
+}
+.menu-dropdown li a {
+  color: #e7e7e7;
+}
+.menu-dropdown li a:hover{
+  cursor: pointer;
+  background: #122038;
+  color: #e7e7e7;
+}
+
+#header-middle h2{
+  margin: 0;
+  color: #f7f7f7;
+  font-size: 24px;
+  text-shadow: 1px 2px #000;
+}
+#header-middle h2 span.brand{
+  color: #4377D1;
+  font-size: 20px;
+}
+
+.form-control{
+  height: 30px;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+  }
+}
+
+.navbar-form input{
+  background: #222;
+  border-radius: 0;
+  color: #fff;
+  border: 0;
+}
+form.navbar-form button.btn{
+  padding: 4px 12px;
+  background: #333;
+  border:0;
+  border-radius: 0;
+}
+
+.c-logo{
+  font-size: 18px;
+}
+
+#toggle-toolbar{
+  float: left;
+  margin-top: 5%;
+  margin-left: -284px;
+  height:500px;
+  width: 304px;
+  background: #222222;
+
+}
+#toggle-icon-wrapper{
+  width: 300px;
+height: 400px;
+}
+
+#toggle-icon{
+  width: 30px;
+  height: 500px;
+  font-size: 15px;
+  padding:0px 5px;
+  float: right;
+  margin-right: -16px;
+  color: #fff;
+  background: #151515;
+  border: 2px solid #151515;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+#toggle-icon:hover{
+  cursor: pointer;
+}
+
+.breadcrumb-holder{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.point-arrow{
+
+  margin-top:235px;
+}
+#editor-sidebar{
+margin-left: 5px;
+width: 280px;
+}
+#editor-sidebar li a{
+  font-weight: bold;
+}
+#editor-sidebar li a:hover{
+  cursor: pointer;
+}
+
+.nav-sidebar button {
+  background: #151515;
+  color: #c7c7c7;
+  border: 0;
+  padding: 5px 8px;
+  margin-right: 15px;
+}
+
+.editor-input{
+    width: 75px;
+    height: 20px;
+    color: #151515;
+}
+
+li.editor-dropdown{
+  background: #252525;
+  color: #c7c7c7;
+  padding: 10px 15px;
+}
+
+.editor-dropdown input{
+  color: #000;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #c7c7c7;
+  padding: 15px;
+}
+
+
+
+.chart-type{
+background: #fff;
+text-align: center;
+padding:10px;
+}
+
+.chart-type{
+  cursor: pointer;
+}
+
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}

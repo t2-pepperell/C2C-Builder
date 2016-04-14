@@ -1,0 +1,126 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+	font-family: 'Open Sans', sans-serif;
+	background: #f7f7f7;
+}
+
+
+
+.starter-template {
+  padding: 40px 5px;
+  text-align: center;
+}
+
+
+#chartBuild{
+
+  background: #f7f7f7;
+}
+
+.application-wrapper{
+
+  padding: 25px;
+  min-height: 460px;
+}
+
+.glyph-size{
+
+  font-size: 75px;
+  color: #2f2f2f;
+}
+
+.chart-type{
+
+  border-radius: 10px;
+  padding-top:25px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.chart{
+  width: 600px;
+  height: 600px;
+}
+
+.chart-wrapper{
+  border: 2px solid #f7f7f7;
+
+}
+
+.chart-sidebar{
+    background-image: -webkit-linear-gradient(top, #4C4F54  0,#222 100%);
+    background-image: -o-linear-gradient(top,#4C4F54  0,#222 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#4C4F54 ),to(#222));
+    background-image: linear-gradient(to bottom,#4C4F54  0,#222 100%);
+    padding: 0;
+
+}
+
+.btn-chart-Sidebar{
+  width: 100%;
+  padding: 15px 20px;
+  color: #cccccc;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+background-image: -webkit-linear-gradient(top,#4C4F54 0, #3A3D40 100%);
+  background-image: -o-linear-gradient(top,#4C4F54 0, #3A3D40 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#4C4F54),to(#373a40));
+  background-image: linear-gradient(to bottom,#4C4F54 0,#3A3D40 100%);
+}
+
+.btn-chart-Sidebar:hover{
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+
+}
+/*
+a.btn-chart-Sidebar.col-md-12.coll > span.right-arrow{
+  width: 0;
+  float:right;
+  height: 0;
+  border-left: 6px solid #transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff;
+  border-bottom: 6px solid transparent;
+}*/
+
+.right-arrow{
+  width: 0;
+  float:right;
+	height: 0;
+	border-left: 6px solid #ccc;
+	border-right: 6px solid transparent;
+	border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+
+}
+
+.editor-toggle{
+
+  cursor: pointer;
+
+}
+
+.collapse{
+
+  padding: 10px;
+}
+
+.navbar-inverse{
+height: 65px;
+	background-color:#1B6557;
+	border-color:#144B41;
+	border-bottom: 3px solid;
+  background-image: -webkit-linear-gradient(top,#517f81 0,  #243949 100%);
+    background-image: -o-linear-gradient(top,#517fa4 0,  #243949 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#517fa4),to(#243949));
+    background-image: linear-gradient(to bottom,#517fa4 0,#243949 100%);
+}
