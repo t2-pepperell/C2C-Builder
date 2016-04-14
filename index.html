@@ -84,10 +84,11 @@
 
                 <!-- Start of Stage 1 of Application -->
                 <div class="animate-switch"  ng-switch-when="stage1">
+                  <button ng-click = "next('default')" style="margin-right: 25px;" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
                   <div class="container">
                     <div class="breadcrumb-holder">Stage <span class="stage">1</span> of 3</div>
                   </div>
-                  <div class="container"><div class="jumbotron"><button ng-click = "next('default')" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
+                  <div class="container"><div class="jumbotron">
                     <h3 style="text-align: center;">Step One: Chart Type</h3>
                     <p>Please select which chart you would like to build:</p><br>
                     <div class="row" style="margin-top: 10px;">
@@ -102,11 +103,12 @@
 
               <!-- Start of Stage 2 of Application -->
                <div class="animate-switch" ng-switch-when="stage2" >
+                 <button ng-click = "next('default')" style="margin-right: 25px;" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
                  <div class="container">
                    <div class="breadcrumb-holder">Stage <span class="stage">2</span> of 3</div>
                  </div>
                  <div class="container">
-                   <div class="jumbotron row"><button ng-click = "next('default')" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
+                   <div class="jumbotron row">
                      <div class="alert alert-warning alert-dismissible" role="alert" style="display: none;">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <strong>Warning!</strong> You forgot to choose a csv File to upload!
@@ -162,6 +164,7 @@
 
               <!-- Start of Stage 3 of Application -->
               <div class="animate-switch" ng-switch-when="stage3">
+                <button ng-click = "next('default')" style="margin-right: 25px;" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
                 <div class="container">
                   <div class="breadcrumb-holder">Stage <span id="stage">3</span> of 3</div>
                 </div>
@@ -187,16 +190,16 @@
                         <li  class="editor-dropdown" style="display: none;"><span><strong>Axis Colour:</strong> #dddddd</span><input type="color"  value="#dddddd" id="chart-axis-colour" class="pull-right editor-input" style="height: 30px;width: 30px;"></li>
                         <li  class="editor-option"><a>Bar Colour<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
                         <li  class="editor-dropdown" style="display: none;"><span><strong>Bar Colour:</strong> #122038</span><input type="color"  value="#122038" id="chart-bar-colour" class="pull-right editor-input" style="height: 30px;width: 30px;"></li>
-                       
+<button id="chart-update" class="pull-right">Update Chart</button>
                       </ul>
-					   <button id="chart-update" class="pull-right">Update Chart</button>
+
                     </div>
                   </div>
                 </div>
                 <!-- End of Editor Toggle Toolbar -->
 
 
-                  <div class="container"><div id="chart-wrapper" class="jumbotron row"><button ng-click = "next('default')" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
+                  <div class="container"><div id="chart-wrapper" class="jumbotron row">
 				  <div id="line-warning"></div>
                   <div class="col-md-10 col-md-push-1">
                     <div>
@@ -208,10 +211,10 @@
                     <canvas id="exportCanvas" style="display:none;" ></canvas>
                   </div>
                   </div>
-					
+
                 </div>
               <button class="btn btn-primary" id="save"  onclick="downloadChart()">Save File</button></div> <!--  End of #chart-wrapper Div-->
-			  
+
               </div>  <!--  End of Stage 3 of Application-->
 
             </div><!-- End of Container for angular -->
