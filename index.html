@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="css/application.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/angular.min.js"></script>
+  </head>
+  <body>
+
+
+    <!-- Main Navigation Menu -->
+      <nav id="header-wrap" class="navbar navbar-default" style="border: none;border-radius:0;">
+          <ul class="nav navbar-nav" >
+              <li id="header-left" class="pull-left">
+                <div class="dropdown">
+                    <span id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" class="menu glyphicon glyphicon-menu-hamburger dropdown-toggle"></span>
+                    <ul class="dropdown-menu menu-dropdown"  aria-labelledby="dropdownMenu">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="support.html">Support</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li id="header-middle"><h2><span class="brand"><span class="c-logo">C</span>2<span class="c-logo">C</span></span> Builder</h2></li>
+              <li id="header-right" class="pull-right">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group" style="display: none;">
+                      <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group" style="display:none;">
+                      <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </li>
+        </ul>
+      </nav>
+      <!--  End of Main Navigation Menu -->
+
+
+      <!-- Main container for Application -->
+
+
+        <!-- Start of Angular.js application-->
+        <div id="chartBuild" data-ng-app="myApp"><!-- #ChartBuild Div -->
+          <div ng-controller="MainCtrl">
+              <div class="animate-switch-container" ng-switch on="selection" ng-class="{forward: direction, backward:!direction,longStage: longStage}">
+                <div class="container">
+                  <div class="breadcrumb-holder" > </div>
+                </div>
+
+                <div class="progress container" style="display:none; margin-top: 25px;">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 0%; ">
+                    Step 0 of 3
+                  </div>
+                </div>
+                <!-- Default page for application-->
+                <div class="animate-switch" ng-switch-default>
+                  <div class="container" style="margin-top: 25px;"><div class="jumbotron">
+                    <h2>C2C Builder</h2>
+                    <p> Welcome to the Csv to Chart Builder, the application will allow you to convert your csv file into graphical charts which can be edited using our editor toolbar. if you wish to use the application click on the start application button below.</p>
+                    <button class="btn btn-success pull-right" data-step="1" ng-click="next('stage1')">Start Application</button>
+                  </div></div> <!-- End of Jumbotron-->
+                </div>
+                <!-- End of switch Default -->
+
+                <!-- Start of Stage 1 of Application -->
+                <div class="animate-switch"  ng-switch-when="stage1">
+                  <div class="container">
+                    <div class="breadcrumb-holder">Stage <span class="stage">1</span> of 3</div>
+                  </div>
+                  <div class="container"><div class="jumbotron"><button ng-click = "next('default')" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
+                    <h3 style="text-align: center;">Step One: Chart Type</h3>
+                    <p>Please select which chart you would like to build:</p><br>
+                    <div class="row" style="margin-top: 10px;">
+                      <div class="col-md-2 col-md-push-1" ng-click = "next('stage2');chartType('barChart')">  <div class="chart-type"><img src="img/business.png" alt="Bar Chart Icon"><br><br>Bar Chart</div></div>
+                      <div class="col-md-2 col-md-push-1" ng-click = "next('stage2');chartType('lineChart')"> <div class="chart-type"><img src="img/line.png" alt="Line chart Icon"><br><br>Line Chart</div></div>
+                      <div class="col-md-2 col-md-push-1"> <div class="chart-type"><img src="img/social.png" alt="coming Soon icon"><br><br>Coming Soon!</div></div>
+                      <div class="col-md-2 col-md-push-1"> <div class="chart-type"><img src="img/social.png" alt="coming Soon icon"><br><br>Coming Soon!</div></div>
+                    </div>
+                  </div></div>
+               </div>
+               <!-- End of Step 1 of Application -->
+
+              <!-- Start of Stage 2 of Application -->
+               <div class="animate-switch" ng-switch-when="stage2" >
+                 <div class="container">
+                   <div class="breadcrumb-holder">Stage <span class="stage">2</span> of 3</div>
+                 </div>
+                 <div class="container">
+                   <div class="jumbotron row"><button ng-click = "next('default')" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
+                     <div class="alert alert-warning alert-dismissible" role="alert" style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Warning!</strong> You forgot to choose a csv File to upload!
+                    </div>
+                     <h3 style="text-align:center;"> Step Two: File Upload</h3>
+                     <p style="text-align:center;font-size: 14px;">Please select the file you wish to upload:</p><br>
+                     <div>
+
+                      <div class="row">
+                        <div class="col-md-5"><br>
+                          <p style="font-size: 16px; font-weight: bold;">By File Upload</p>
+                            <input style="text-align: center;margin:15 auto 0 auto;" type="file"  required file-model="myFile" /><br>
+                            <div>
+                              <strong>Example:</strong><br>
+                              Date,Value<br>2013-01,100<br>2013-02,165<br>2013-03,269<br>2013-04,344<br>2013-05,376<br>2013-06,410<br>2013-07,421<br>2013-08,405<br>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="">
+                          <div style="height:300px;width: 10px; background: #fff;margin:0 auto;padding-top: 141px;">
+                            <div style=" font-size: 18px; font-weight: bold;background: #EEEEEE;">
+                              OR
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-5"><br>
+                          <p style="font-size: 16px; font-weight: bold;">Copy and paste CSV(Coming Soon!)</p>
+                          <div class="form-group">
+                            <textarea  id="inputCSV" class="form-control" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" style="margin-top: 25px;">
+                      <div  class="col-md-12" style="">
+                         <!-- <button class="pull-right"ng-click = "uploadFile('empty'); next('stage3');" id="uploader">Upload</button>-->
+                            <button class="btn btn-primary " ng-click="backTo('default')">Back</button>
+                           <button class="pull-right btn btn-success" ng-click = "uploadFile('empty');" id="uploader">Upload</button>
+
+
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+                    </div>
+                  </div>
+               </div>
+             </div>
+               <!-- End of Step 2 of Application-->
+
+              <!-- Start of Stage 3 of Application -->
+              <div class="animate-switch" ng-switch-when="stage3">
+                <div class="container">
+                  <div class="breadcrumb-holder">Stage <span id="stage">3</span> of 3</div>
+                </div>
+                <!-- Editor Toggle Toolbar -->
+                <div id="toggle-toolbar">
+                  <div id="toggle-icon-wrapper">
+                    <div id="toggle-icon"><span class="glyphicon glyphicon-chevron-right point-arrow"></span></div>
+                    <div id="editor-sidebar">
+                      <ul class="nav nav-sidebar">
+                        <!--<li  class="editor-option"><a>Height <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><span><strong>Current Height:</strong> 300px</span><input type="text" id="chart-height" class="pull-right editor-input"></li>-->
+                        <!--<li  class="editor-option"><a>Width<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><span><strong>Current Width:</strong> 300px</span><input type="text" class="pull-right editor-input"></li>-->
+                        <li  class="editor-option"><a>Title<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><input type="text" id="chart-title" ></li>
+                        <li  class="editor-option"><a>X Axis Label<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><input type="text" id="chart-xLabel" ></li>
+                        <li  class="editor-option"><a>Y Axis Label<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><input type="text" id="chart-yLabel" ></li>
+                        <!-- <li  class="editor-option"><a>Stroke Width<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><span><strong>Axis Width:</strong> 300px</span><input type="text" class="pull-right editor-input"></li> -->
+                        <li  class="editor-option"><a>Axis Colour<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><span><strong>Axis Colour:</strong> #dddddd</span><input type="color"  value="#dddddd" id="chart-axis-colour" class="pull-right editor-input" style="height: 30px;width: 30px;"></li>
+                        <li  class="editor-option"><a>Bar Colour<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                        <li  class="editor-dropdown" style="display: none;"><span><strong>Bar Colour:</strong> #122038</span><input type="color"  value="#122038" id="chart-bar-colour" class="pull-right editor-input" style="height: 30px;width: 30px;"></li>
+                       
+                      </ul>
+					   <button id="chart-update" class="pull-right">Update Chart</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Editor Toggle Toolbar -->
+
+
+                  <div class="container"><div id="chart-wrapper" class="jumbotron row"><button ng-click = "next('default')" class="pull-right reset btn btn-danger" href="index.html">Reset Application</button>
+				  <div id="line-warning"></div>
+                  <div class="col-md-10 col-md-push-1">
+                    <div>
+                      <svg id="chart" class="chart" style="text-align:center;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;"></svg>
+                    </div>
+                    <div class="row">
+                    <div id="svgdataurl" style="display:none;"></div>
+                    <div id="pngdataurl" style="display:none;"></div>
+                    <canvas id="exportCanvas" style="display:none;" ></canvas>
+                  </div>
+                  </div>
+					
+                </div>
+              <button class="btn btn-primary" id="save"  onclick="downloadChart()">Save File</button></div> <!--  End of #chart-wrapper Div-->
+			  
+              </div>  <!--  End of Stage 3 of Application-->
+
+            </div><!-- End of Container for angular -->
+          </div> <!-- End of Main controller div -->
+        </div> <!-- End of #chartBuild Div -->
+
+
+
+
+
+
+
+        <footer class="footer">
+          <div class="container">
+            <div class="col-md-4">Icons made by <a href="http://www.flaticon.com/authors/plainicon" title="Plainicon">Plainicon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div class="col-md-4">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div class="col-md-4">Icons made by <a href="http://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+          </div>
+        </footer>
+
+
+      <script src="js/jQuery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/toggle.js"></script>
+      <script src="js/d3.min.js"></script>
+      <script src="js/angular.js"></script>
+
+  </body>
+</html>

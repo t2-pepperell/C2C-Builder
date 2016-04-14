@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="css/application.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/angular.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container" style="margin-top: 50px;text-align: center;">
+      <ul id="tabs" class="nav nav-tabs" data-tabs="tabs" style="margin-bottom: 25px;">
+       <li class="active"><a href="#garret" data-toggle="tab">J.J Garrett</a></li>
+       <li><a href="#browser" data-toggle="tab">Browser Testing</a></li>
+       <li><a href="#yellow" data-toggle="tab">Yellow</a></li>
+       <li><a href="#green" data-toggle="tab">Green</a></li>
+       <li><a href="#blue" data-toggle="tab">Blue</a></li>
+   </ul>
+     <div class="tab-content">
+      <div id="garret" class="tab-pane active">
+          <h3>Jesse James Garrett - Five layer Model</h3>
+          <img src="https://s-media-cache-ak0.pinimg.com/736x/84/38/9a/84389a10d6a19cbb6c19c616d0edaabd.jpg">
+          <div class="row" style="margin-top: 25px;"><h4>Site Objectives</h4></div>
+      </div>
+      <div id="browser" class="tab-pane">
+        <table class="table table-bordered">
+          <thead><th>Browser</th><th>Navigation Buttons</th><th>Interaction Behaviours</th><th>Save Function</th><th>Layout</th><th>Loading Times</th></thead>
+          <tbody>
+            <tr>
+              <td>Google Chrome</td>
+              <td>All buttons within the application itself work correctly. To start the application is clearly display on the main page when loaded. </td>
+              <td>The application interacts accordingly. No bugs appearing. Warning messages appear when misclicked </td>
+              <td> Save function button works. Image of the chart downloaded successfully. </td>
+              <td> No changes to the layout. Responsive to the browser window. Chart's SVG does not resize. </td>
+              <td> No problems loading. Very fast.</td>
+            </tr>
+            <tr>
+              <td>Mozilla Firefox</td>
+              <td></td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Microoft Edge</td>
+              <td>All buttons within the application appear to work correctly</td>
+              <td>The application appears to interacting correctly apart from the interaction for the save button. </td>
+              <td> The save button appears to be saving. A loading icon appears however it doesn't save the file</td>
+              <td> The layout remains the same as othe browsers and the responsive layout appears to be work except for the resizing of the SVG.</td>
+              <td>Loaded very quickly. No problems with initial load</td>
+            </tr>
+            <tr>
+              <td>Internet Explorer  11</td>
+              <td>Buttons within the application are working correctly. Able to navigate throughout the application with ease.</td>
+              <td> All the interaction work appropriately apart from the save function.</td>
+              <td> Save button didn't seem to work. Script error appears in the console log, mentioning a security error with it.</td>
+              <td> Layout displays correctly. No elements appear to of moved.</td>
+              <td> Laoded fast. No problems at all. </td>
+            </tr>
+            <tr>
+              <td> Safari</td>
+              <td></td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        The errors with the save function within Internet explorer will need to be address. The common browser within the M.o.D is internet explorer so it is important that it becomes a priority.
+        After investigating the issue, the error explains there is a problem in the angular.js script involving the error on line 313.
+      </div>
+    </div>
+  </div>
+
+      <script src="js/jQuery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/toggle.js"></script>
+      <script src="js/d3.min.js"></script>
+      <script src="js/angular.js"></script>
+  </body>
+</html>
